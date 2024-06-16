@@ -1,0 +1,94 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri May  3 13:26:59 2024
+# Process ID: 11248
+# Current directory: C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1
+# Command line: vivado.exe -log clock_main_1.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source clock_main_1.tcl -notrace
+# Log file: C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1/clock_main_1.vdi
+# Journal file: C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1\vivado.jou
+# Running On: Phanindra, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 16785 MB
+#-----------------------------------------------------------
+source clock_main_1.tcl -notrace
+Command: open_checkpoint clock_main_1_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 317.395 ; gain = 7.609
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 881.090 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 970.707 ; gain = 0.074
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1583.582 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1583.582 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1583.582 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1583.582 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1583.582 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1583.582 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 1583.582 ; gain = 8.695
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1583.582 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2023.2 (64-bit) build 4029153
+WARNING: [Vivado 12-23575] Critical violations of the methodology design rules detected. Critical violations may contribute to timing failures or cause functional issues in hardware. Run report_methodology for more information.
+open_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 1583.582 ; gain = 1277.031
+Command: write_bitstream -force clock_main_1.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC PDRC-153] Gated clock check: Net a1/hr1_reg[4]_i_2_n_0 is a gated clock net sourced by a combinational pin a1/hr1_reg[4]_i_2/O, cell a1/hr1_reg[4]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net a1/min1__0 is a gated clock net sourced by a combinational pin a1/min1_reg[5]_i_1/O, cell a1/min1_reg[5]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net load14_out is a gated clock net sourced by a combinational pin load1_reg_i_1/O, cell load1_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net load22_out is a gated clock net sourced by a combinational pin load2_reg_i_2/O, cell load2_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net load3_reg_i_2_n_0 is a gated clock net sourced by a combinational pin load3_reg_i_2/O, cell load3_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/min1_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/min1_reg[0]_LDC_i_1/O, cell t/min1_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/min1_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/min1_reg[1]_LDC_i_1/O, cell t/min1_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/min1_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/min1_reg[2]_LDC_i_1/O, cell t/min1_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/min1_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/min1_reg[3]_LDC_i_1/O, cell t/min1_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/min1_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/min1_reg[4]_LDC_i_1/O, cell t/min1_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/min1_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/min1_reg[5]_LDC_i_1/O, cell t/min1_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/min_reg[5]_i_1_n_0 is a gated clock net sourced by a combinational pin t/min_reg[5]_i_1/O, cell t/min_reg[5]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/sec1_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/sec1_reg[0]_LDC_i_1/O, cell t/sec1_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/sec1_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/sec1_reg[1]_LDC_i_1/O, cell t/sec1_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/sec1_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/sec1_reg[2]_LDC_i_1/O, cell t/sec1_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/sec1_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/sec1_reg[3]_LDC_i_1/O, cell t/sec1_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/sec1_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/sec1_reg[4]_LDC_i_1/O, cell t/sec1_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/sec1_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin t/sec1_reg[5]_LDC_i_1/O, cell t/sec1_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net t/sec__0 is a gated clock net sourced by a combinational pin t/sec_reg[5]_i_1/O, cell t/sec_reg[5]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 19 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 14354880 bits.
+Writing bitstream ./clock_main_1.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 2062.824 ; gain = 479.242
+INFO: [Common 17-206] Exiting Vivado at Fri May  3 13:27:37 2024...

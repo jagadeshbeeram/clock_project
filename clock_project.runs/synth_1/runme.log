@@ -1,0 +1,331 @@
+
+*** Running vivado
+    with args -log clock_main_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source clock_main_1.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source clock_main_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 486.949 ; gain = 180.004
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/phani/vivado files/clock_project/clock_project.srcs/utils_1/imports/synth_1/test.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/phani/vivado files/clock_project/clock_project.srcs/utils_1/imports/synth_1/test.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top clock_main_1 -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13152
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1323.785 ; gain = 440.258
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10714] extra semicolon is not allowed here in this dialect; use SystemVerilog mode instead [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:24]
+INFO: [Synth 8-6157] synthesizing module 'clock_main_1' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/imports/new/clock_divider.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (0#1) [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/imports/new/clock_divider.v:1]
+INFO: [Synth 8-6157] synthesizing module 'refresh' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/refershrate.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'refresh' (0#1) [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/refershrate.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ctime' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:1]
+INFO: [Synth 8-6157] synthesizing module 'segment' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/segment.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'segment' (0#1) [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/segment.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ctime' (0#1) [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:1]
+WARNING: [Synth 8-7071] port 'hr' of module 'ctime' is unconnected for instance 'c1' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:36]
+WARNING: [Synth 8-7071] port 'min' of module 'ctime' is unconnected for instance 'c1' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:36]
+WARNING: [Synth 8-7023] instance 'c1' of module 'ctime' has 13 connections declared, but only 11 given [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:36]
+INFO: [Synth 8-6157] synthesizing module 'alarm' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/alarm.v:3]
+WARNING: [Synth 8-567] referenced signal 'load' should be on the sensitivity list [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/alarm.v:28]
+WARNING: [Synth 8-567] referenced signal 'digitval' should be on the sensitivity list [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/alarm.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'alarm' (0#1) [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/alarm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'timer' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/timer.v:4]
+WARNING: [Synth 8-567] referenced signal 'load' should be on the sensitivity list [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/timer.v:26]
+WARNING: [Synth 8-567] referenced signal 'digitval' should be on the sensitivity list [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/timer.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'timer' (0#1) [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/timer.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'clock_main_1' (0#1) [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:3]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register min1_reg in module ctime. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:38]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register min2_reg in module ctime. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:39]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register sec1_reg in module ctime. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:40]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register sec2_reg in module ctime. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:41]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register hr1_reg in module ctime. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:66]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register hr2_reg in module ctime. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:69]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register sec_reg in module ctime. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:80]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register sec_reg in module ctime. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:80]
+WARNING: [Synth 8-7137] Register hr1_reg in module ctime has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:66]
+WARNING: [Synth 8-7137] Register hr2_reg in module ctime has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:69]
+WARNING: [Synth 8-7137] Register sec_reg in module ctime has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v:80]
+WARNING: [Synth 8-7137] Register min1_reg in module timer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/timer.v:68]
+WARNING: [Synth 8-7137] Register sec1_reg in module timer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/timer.v:68]
+WARNING: [Synth 8-7129] Port decrement in module ctime is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1435.375 ; gain = 551.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1435.375 ; gain = 551.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1435.375 ; gain = 551.848
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1435.375 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/phani/vivado files/clock_project/clock_project.srcs/constrs_1/imports/DEC LAB/Basys-3-Master_2.xdc]
+WARNING: [Vivado 12-507] No nets matched 'mode_IBUF'. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/constrs_1/imports/DEC LAB/Basys-3-Master_2.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/constrs_1/imports/DEC LAB/Basys-3-Master_2.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'increment_IBUF'. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/constrs_1/imports/DEC LAB/Basys-3-Master_2.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/constrs_1/imports/DEC LAB/Basys-3-Master_2.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'decrement_IBUF'. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/constrs_1/imports/DEC LAB/Basys-3-Master_2.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/constrs_1/imports/DEC LAB/Basys-3-Master_2.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'almdigit_IBUF'. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/constrs_1/imports/DEC LAB/Basys-3-Master_2.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/phani/vivado files/clock_project/clock_project.srcs/constrs_1/imports/DEC LAB/Basys-3-Master_2.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/phani/vivado files/clock_project/clock_project.srcs/constrs_1/imports/DEC LAB/Basys-3-Master_2.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/phani/vivado files/clock_project/clock_project.srcs/constrs_1/imports/DEC LAB/Basys-3-Master_2.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clock_main_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/clock_main_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1493.520 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+The system cannot find the path specified.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1493.520 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'hr1_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/alarm.v:35]
+WARNING: [Synth 8-327] inferring latch for variable 'min1_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/alarm.v:42]
+WARNING: [Synth 8-327] inferring latch for variable 'sec_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/timer.v:33]
+WARNING: [Synth 8-327] inferring latch for variable 'min_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/timer.v:40]
+WARNING: [Synth 8-327] inferring latch for variable 'm_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'an_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'load2_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:37]
+WARNING: [Synth 8-327] inferring latch for variable 'digit0_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:37]
+WARNING: [Synth 8-327] inferring latch for variable 'load3_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:38]
+WARNING: [Synth 8-327] inferring latch for variable 'digit1_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:38]
+WARNING: [Synth 8-327] inferring latch for variable 'load1_reg' [C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v:35]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   26 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 22    
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 3     
+	                6 Bit    Registers := 4     
+	                4 Bit    Registers := 22    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   4 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 17    
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 70    
+	   4 Input    4 Bit        Muxes := 10    
+	   2 Input    1 Bit        Muxes := 24    
+	   3 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port decrement in module ctime is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (m_reg[3]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (m_reg[2]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (m_reg[1]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (m_reg[0]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (seg_reg[6]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (seg_reg[5]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (seg_reg[4]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (seg_reg[3]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (seg_reg[2]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (seg_reg[1]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (seg_reg[0]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (an_reg[3]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (an_reg[2]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (an_reg[1]) is unused and will be removed from module clock_main_1.
+WARNING: [Synth 8-3332] Sequential element (an_reg[0]) is unused and will be removed from module clock_main_1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     4|
+|2     |CARRY4 |    37|
+|3     |LUT1   |    15|
+|4     |LUT2   |    57|
+|5     |LUT3   |    67|
+|6     |LUT4   |    46|
+|7     |LUT5   |    72|
+|8     |LUT6   |   105|
+|9     |FDCE   |    24|
+|10    |FDPE   |    12|
+|11    |FDRE   |   191|
+|12    |LD     |    27|
+|13    |LDC    |    12|
+|14    |LDP    |     1|
+|15    |IBUF   |    17|
+|16    |OBUF   |    23|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1493.520 ; gain = 609.992
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:34 . Memory (MB): peak = 1493.520 ; gain = 551.848
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1493.520 ; gain = 609.992
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1493.520 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 77 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1493.520 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 40 instances were transformed.
+  LD => LDCE: 27 instances
+  LDC => LDCE: 12 instances
+  LDP => LDPE: 1 instance 
+
+The system cannot find the path specified.
+Synth Design complete | Checksum: bbe23deb
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 47 Warnings, 12 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 1493.520 ; gain = 1003.621
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1493.520 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/phani/vivado files/clock_project/clock_project.runs/synth_1/clock_main_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file clock_main_1_utilization_synth.rpt -pb clock_main_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri May  3 13:20:14 2024...

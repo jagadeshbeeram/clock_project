@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri May  3 13:20:42 2024
+# Process ID: 18752
+# Current directory: C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1
+# Command line: vivado.exe -log clock_main_1.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source clock_main_1.tcl -notrace
+# Log file: C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1/clock_main_1.vdi
+# Journal file: C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1\vivado.jou
+# Running On: Phanindra, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 16785 MB
+#-----------------------------------------------------------
+source clock_main_1.tcl -notrace

@@ -1,0 +1,138 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Apr 16 17:31:21 2024
+# Process ID: 1312
+# Current directory: C:/Users/phani/vivado files/clock_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13580 C:\Users\phani\vivado files\clock_project\clock_project.xpr
+# Log file: C:/Users/phani/vivado files/clock_project/vivado.log
+# Journal file: C:/Users/phani/vivado files/clock_project\vivado.jou
+# Running On: Phanindra, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 16785 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/phani/vivado files/clock_project/clock_project.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open {C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/stop_watch.v} w ]
+add_files {{C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/stop_watch.v}}
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clocktime.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top clock_main [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/seconddisp.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/seconddisp.v}}
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clocktime.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clocktime.v}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open {C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v} w ]
+add_files {{C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/clock_main_1.v}}
+close [ open {C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v} w ]
+add_files {{C:/Users/phani/vivado files/clock_project/clock_project.srcs/sources_1/new/time.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1/clock_main_1.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1/clock_main_1.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1/clock_main_1.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1/clock_main_1.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1/clock_main_1.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/phani/vivado files/clock_project/clock_project.runs/impl_1/clock_main_1.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

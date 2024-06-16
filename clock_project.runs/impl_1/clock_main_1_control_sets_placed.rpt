@@ -1,0 +1,137 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Fri May  3 13:21:18 2024
+| Host         : Phanindra running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file clock_main_1_control_sets_placed.rpt
+| Design       : clock_main_1
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    59 |
+|    Minimum number of control sets                        |    59 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   349 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    59 |
+| >= 0 to < 4        |    44 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             102 |           43 |
+| No           | No                    | Yes                    |              12 |           12 |
+| No           | Yes                   | No                     |              91 |           37 |
+| Yes          | No                    | No                     |              26 |            8 |
+| Yes          | No                    | Yes                    |              24 |           16 |
+| Yes          | Yes                   | No                     |              12 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+-----------------------+---------------------------+------------------+----------------+--------------+
+|        Clock Signal        |     Enable Signal     |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------+-----------------------+---------------------------+------------------+----------------+--------------+
+|  t/min1_reg[2]_LDC_i_1_n_0 |                       | t/min1_reg[2]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/min1[5]_P_i_1_n_0   | t/min1_reg[2]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  digit0                    |                       |                           |                1 |              1 |         1.00 |
+|  digit1                    |                       |                           |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/min1[5]_P_i_1_n_0   | t/min1_reg[3]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/min1[5]_P_i_1_n_0   | t/min1_reg[5]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/min1[5]_P_i_1_n_0   | t/min1_reg[1]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/min1_reg[3]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/min1[5]_P_i_1_n_0   | t/min1_reg[4]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  load3_reg_i_2_n_0         |                       |                           |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/min1[5]_P_i_1_n_0   | t/min1_reg[0]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  load22_out                |                       |                           |                1 |              1 |         1.00 |
+|  load14_out                |                       | load10                    |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/sec1[5]_P_i_1_n_0   | t/sec1_reg[0]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/sec1[5]_P_i_1_n_0   | t/sec1_reg[4]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/sec1[5]_P_i_1_n_0   | t/sec1_reg[5]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  t/min1_reg[3]_LDC_i_1_n_0 |                       | t/min1_reg[3]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  t/min1_reg[5]_LDC_i_1_n_0 |                       | t/min1_reg[5]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  t/min1_reg[1]_LDC_i_1_n_0 |                       | t/min1_reg[1]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  t/min1_reg[4]_LDC_i_1_n_0 |                       | t/min1_reg[4]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  t/min1_reg[0]_LDC_i_1_n_0 |                       | t/min1_reg[0]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  t/sec1_reg[0]_LDC_i_1_n_0 |                       | t/sec1_reg[0]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  t/sec1_reg[2]_LDC_i_1_n_0 |                       | t/sec1_reg[2]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  t/sec1_reg[4]_LDC_i_1_n_0 |                       | t/sec1_reg[4]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  t/sec1_reg[5]_LDC_i_1_n_0 |                       | t/sec1_reg[5]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  t/sec1_reg[3]_LDC_i_1_n_0 |                       | t/sec1_reg[3]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  t/sec1_reg[1]_LDC_i_1_n_0 |                       | t/sec1_reg[1]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/sec1[5]_P_i_1_n_0   | t/sec1_reg[3]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/sec1[5]_P_i_1_n_0   | t/sec1_reg[1]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              | t/sec1[5]_P_i_1_n_0   | t/sec1_reg[2]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/min1_reg[0]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/min1_reg[1]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/min1_reg[2]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/min1_reg[4]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/min1_reg[5]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/sec1_reg[0]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/sec1_reg[3]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/sec1_reg[5]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/sec1_reg[4]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/sec1_reg[1]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ckl00/clksec              |                       | t/sec1_reg[2]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  mode_IBUF_BUFG            |                       |                           |                2 |              2 |         1.00 |
+|  modevalue_BUFG[1]         |                       |                           |                1 |              2 |         2.00 |
+| ~clk_IBUF_BUFG             |                       |                           |                3 |              3 |         1.00 |
+|  c1/ckl0/CLK               | c1/min1[3]_i_2__0_n_0 | c1/min10                  |                1 |              4 |         4.00 |
+|  c0/ckl0/clkout_BUFG       | c0/CEC                |                           |                2 |              4 |         2.00 |
+|  a1/hr1_reg[4]_i_2_n_0     |                       |                           |                2 |              5 |         2.50 |
+|  t/min_reg[5]_i_1_n_0      |                       |                           |                2 |              6 |         3.00 |
+|  t/sec__0                  |                       |                           |                2 |              6 |         3.00 |
+|  a1/min1__0                |                       |                           |                4 |              6 |         1.50 |
+|  increment_IBUF_BUFG       | c0/min12              |                           |                2 |              8 |         4.00 |
+|  increment_IBUF_BUFG       | c0/hr12               | c0/hr11[3]_i_1_n_0        |                3 |              8 |         2.67 |
+|  c1/ckl0/CLK               | start_IBUF            | c1/min10                  |                4 |             12 |         3.00 |
+|  c0/ckl0/clkout_BUFG       |                       |                           |                7 |             12 |         1.71 |
+|  c0/ckl0/clkout_BUFG       | c0/min114_out         |                           |                4 |             14 |         3.50 |
+| ~clk_IBUF_BUFG             |                       | c1/ckl0/clkout            |                8 |             26 |         3.25 |
+| ~clk_IBUF_BUFG             |                       | c0/ckl0/clkout_0          |                8 |             26 |         3.25 |
+| ~clk_IBUF_BUFG             |                       | ckl00/count[25]_i_1_n_0   |                8 |             26 |         3.25 |
+|  clk_IBUF_BUFG             |                       |                           |               16 |             56 |         3.50 |
++----------------------------+-----------------------+---------------------------+------------------+----------------+--------------+
+
+
